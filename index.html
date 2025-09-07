@@ -105,11 +105,11 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             loop: true,
-            effect: 'fade',
-            /* autoplay: {
+            effect: 'slide', // Cambiado de 'fade' a 'slide' para probar la solución
+            autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
-            }, */
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
