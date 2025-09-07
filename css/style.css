@@ -631,7 +631,7 @@ footer p {
 /* --- Estilos para Plan de Trabajo (Tarjetas) --- */
 .ejes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Mostradas en una sola columna */
     gap: 2rem;
     margin-top: 2rem;
 }
