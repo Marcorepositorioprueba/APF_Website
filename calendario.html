@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos - APF 2025-2026</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/escudo1.png" alt="Logo Escuela" class="logo">
+        <div class="header-text">
+            <h1>Escuela Primaria Ignacio Zaragoza</h1>
+            <h2>Asociación de Padres de Familia</h2>
+            <p class="header-periodo">Gestión 2025-2026</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" class="nav-button">Inicio</a>
+            <a href="acuerdo_convivencia.html" class="nav-button">Acuerdo de Convivencia</a>
+            <a href="plan_trabajo.html" class="nav-button">Plan de Trabajo</a>
+            <a href="reporte_avances.html" class="nav-button">Reporte de Avances</a>
+            <a href="calendario.html" class="nav-button active">Calendario</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="calendario">
+            <h2>Calendario de Eventos 2025-2026</h2>
+            <p class="intro">Aquí encontrarás las fechas clave de los eventos, reuniones y actividades programadas para el ciclo escolar. ¡No te pierdas de nada!</p>
+
+            <div class="month-container">
+                <h3>Septiembre 2025</h3>
+                <ul class="event-list">
+                    <li>
+                        <span class="event-date">15 SEP</span>
+                        <div class="event-details">
+                            <h4>Ceremonia y Convivencia de Fiestas Patrias</h4>
+                            <p>Acto cívico seguido de una kermés organizada por la APF. ¡Habrá antojitos y juegos!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="event-date">26 SEP</span>
+                        <div class="event-details">
+                            <h4>Junta de Consejo Técnico Escolar</h4>
+                            <p>No hay clases para los alumnos.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="month-container">
+                <h3>Octubre 2025</h3>
+                <ul class="event-list">
+                    <li>
+                        <span class="event-date">10 OCT</span>
+                        <div class="event-details">
+                            <h4>Primera Reunión General con Padres de Familia</h4>
+                            <p>Presentación de la mesa directiva y del plan de trabajo anual. Auditorio de la escuela, 18:00 hrs.</p>
+                        </div>
+                    </li>
+                     <li>
+                        <span class="event-date">31 OCT</span>
+                        <div class="event-details">
+                            <h4>Festival de Día de Muertos</h4>
+                            <p>Exhibición de altares y concurso de disfraces. Organizado por el comité de eventos.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="month-container">
+                <h3>Noviembre 2025</h3>
+                <ul class="event-list">
+                    <li>
+                        <span class="event-date">18 NOV</span>
+                        <div class="event-details">
+                            <h4>Entrega de Calificaciones - Primer Trimestre</h4>
+                            <p>Los tutores se reunirán con los maestros de cada grupo.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="event-date">28 NOV</span>
+                        <div class="event-details">
+                            <h4>Junta de Consejo Técnico Escolar</h4>
+                            <p>No hay clases para los alumnos.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Asociación de Padres de Familia. Todos los derechos reservados. "Por una comunidad Unida en un Sólo Propósito"</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
