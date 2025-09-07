@@ -725,3 +725,44 @@ footer p {
     border-top-color: var(--eje-color);
 }
 .eje-4 .eje-icon i { color: var(--eje-color); }
+
+/* --- Estilos para la Sección de Descarga --- */
+.descarga-seccion {
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.btn-descarga {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 90%;
+    text-decoration: none;
+}
+
+.btn-descarga:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.btn-descarga:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.btn-descarga span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 0.4rem;
+    opacity: 0.9;
+}
