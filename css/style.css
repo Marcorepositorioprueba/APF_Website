@@ -56,6 +56,7 @@ header h2 {
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative; /* Añadido para anclar el menú desplegable */
 }
 
 .hamburger-menu {
@@ -527,7 +528,7 @@ footer p {
     .main-nav {
         padding: 0.5rem 1rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start; /* Cambiado para alinear a la izquierda */
         align-items: center;
     }
 
