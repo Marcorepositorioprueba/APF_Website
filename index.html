@@ -126,6 +126,29 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
+
+        // Detener/reactivar el autoplay del carrusel según el estado del video
+        try {
+            const videoPlayer = document.querySelector('.video-container video');
+            if (videoPlayer && swiper.autoplay) {
+                // Detener cuando el video se reproduce
+                videoPlayer.addEventListener('play', () => {
+                    swiper.autoplay.stop();
+                });
+
+                // Reactivar cuando el video se pausa
+                videoPlayer.addEventListener('pause', () => {
+                    swiper.autoplay.start();
+                });
+
+                // Reactivar cuando el video termina
+                videoPlayer.addEventListener('ended', () => {
+                    swiper.autoplay.start();
+                });
+            }
+        } catch (e) {
+            console.error("Error al añadir los listeners para el video:", e);
+        }
     </script>
 </body>
 </html>
