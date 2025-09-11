@@ -766,3 +766,11 @@ footer p {
     margin-top: 0.4rem;
     opacity: 0.9;
 }
+
+/* Estilo para la bandera en el calendario */
+.flag-icon {
+    height: 80px; /* Tamaño aumentado nuevamente */
+    width: auto;
+    float: left;
+    margin-right: 15px; /* Espacio a la derecha de la bandera */
+}
