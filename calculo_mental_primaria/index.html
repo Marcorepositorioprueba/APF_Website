@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Mental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/escudo1.png" alt="Logo Escuela" class="logo">
+        <div class="header-text">
+            <h1>Escuela Primaria Ignacio Zaragoza</h1>
+            <h2>Asociación de Padres de Familia</h2>
+            <p class="header-periodo">Gestión 2025-2026</p>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Cálculo Mental</h1>
+        <div id="problem-area">
+            <p id="problem-text">Cargando problema...</p>
+            <input type="number" id="answer-input" placeholder="Tu respuesta" autofocus>
+            <button id="submit-button">Responder</button>
+        </div>
+        <div id="feedback-area">
+            <p id="feedback-text"></p>
+        </div>
+        <div id="score-area">
+            <p>Puntos: <span id="score">0</span></p>
+        </div>
+        <div id="controls-area">
+            <label for="operation-select">Operación:</label>
+            <select id="operation-select">
+                <option value="+">Suma</option>
+                <option value="-">Resta</option>
+                <option value="*">Multiplicación</option>
+                <option value="/">División</option>
+            </select>
+            <label for="difficulty-select">Dificultad:</label>
+            <select id="difficulty-select">
+                <option value="easy">Fácil (1-10)</option>
+                <option value="medium">Medio (10-100)</option>
+                <option value="hard">Difícil (100-1000)</option>
+            </select>
+            <button id="start-button">Iniciar Juego</button>
+            <button id="dictate-button">Dictado</button>
+        </div>
+        <div class="back-button-container">
+            <a href="../recursos_apoyo.html" class="btn-regresar">Regresar a Recursos de Apoyo</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
