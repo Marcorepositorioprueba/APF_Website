@@ -1,0 +1,352 @@
+
+{
+    "semaforo": [
+        {
+            "color": "rojo",
+            "titulo": "¡ALTO! Contacto Inapropiado",
+            "descripcion": "Este es el contacto que NUNCA está bien. Enseña a tu hijo/a que su cuerpo es su tesoro. Nadie, absolutamente nadie, puede tocar sus partes privadas (las que cubre el traje de baño). Los secretos que los hacen sentir mal, tristes o asustados no se deben guardar.",
+            "accion": "Acción: Si alguien intenta esto, deben gritar ¡NO!, correr a un lugar seguro y contárselo inmediatamente a alguien de su Círculo de Confianza hasta que alguien les crea y les ayude."
+        },
+        {
+            "color": "amarillo",
+            "titulo": "PRECAUCIÓN. Contacto Confuso",
+            "descripcion": "Este es el contacto que a veces está bien y a veces no, y puede ser confuso. Por ejemplo, un beso o un abrazo de un familiar o amigo de la familia. El niño/a tiene derecho a decidir si quiere o no ese contacto.",
+            "accion": "Acción: Enseña a tu hijo/a a decir 'No, gracias' o 'Ahora no quiero' con respeto pero con firmeza. Su decisión debe ser respetada por todos. Si alguien los obliga, se convierte en una señal ROJA."
+        },
+        {
+            "color": "verde",
+            "titulo": "ADELANTE. Contacto Seguro",
+            "descripcion": "Este es el contacto que nos hace sentir bien, amados y seguros. Son gestos de cariño que se dan en un ambiente de respeto y amor.",
+            "accion": "Acción: Ejemplos claros son los abrazos de mamá y papá, un choque de manos con un amigo, una caricia en la cabeza o tomarse de la mano. Fomenta este tipo de contacto positivo en la familia."
+        }
+    ],
+    "escenarios": [
+        {
+            "tema": "Paciencia en la crianza",
+            "situacion": "Estás tratando de salir de casa, pero tu hijo de 4 años se tarda una eternidad en ponerse los zapatos.",
+            "solucion": "Solución Positiva: Respira hondo. En lugar de gritar '¡Date prisa!', convierte la situación en un juego. 'A ver si puedes ponerte los zapatos antes de que yo cuente hasta 20'. O valida su ritmo: 'Veo que te estás concentrando mucho en esos zapatos. Es un trabajo difícil'. La paciencia modela autocontrol."
+        },
+        {
+            "tema": "El poder del ejemplo",
+            "situacion": "Le dices a tu hijo que no grite, pero tú mismo alzas la voz cuando te frustras.",
+            "solucion": "Solución Positiva: Si te das cuenta de tu error, discúlpate. 'Perdona por haber gritado antes. Estaba frustrado, pero no debí alzar la voz. Voy a esforzarme más'. Tus acciones son la lección más poderosa. Los niños aprenden lo que ven, no lo que oyen."
+        },
+        {
+            "tema": "Apego seguro y su importancia",
+            "situacion": "Tu bebé llora desconsoladamente cada vez que sales de la habitación.",
+            "solucion": "Solución Positiva: Responde a su necesidad. Regresa, tómalo en brazos y consuélalo. No es 'malcriarlo', es construir confianza. Juega al '¿dónde está?' (peek-a-boo) para enseñarle que aunque te vayas, siempre regresas. Un apego seguro es la base de su futura independencia."
+        },
+        {
+            "tema": "Comunicación afectiva y escucha activa",
+            "situacion": "Tu hijo llega de la escuela y, cuando le preguntas '¿cómo te fue?', responde con un seco 'bien'.",
+            "solucion": "Solución Positiva: Evita el interrogatorio. Prueba con preguntas abiertas y específicas más tarde, en un momento relajado. '¿Qué fue lo más divertido que hiciste en el recreo hoy?' o 'Cuéntame algo que te hizo reír hoy'. Escucha sin juzgar y sin dar soluciones inmediatas."
+        },
+        {
+            "tema": "Refuerzo positivo en lugar de castigo",
+            "situacion": "Tu hija finalmente ordenó su habitación después de pedírselo varias veces.",
+            "solucion": "Solución Positiva: En lugar de un '¡Por fin!', enfócate en el resultado y tu sentimiento. '¡Wow, tu cuarto se ve increíble! Me encanta lo espacioso que está. Gracias por tu ayuda, valoro mucho tu esfuerzo'. El refuerzo específico y sincero es más efectivo que cualquier premio."
+        },
+        {
+            "tema": "Disciplina positiva frente a disciplina violenta",
+            "situacion": "Tu hijo derramó deliberadamente su bebida en el suelo porque estaba enojado.",
+            "solucion": "Solución Positiva: Conecta y luego redirige. 'Veo que estás muy enojado. Está bien sentir enojo, pero no está bien tirar las cosas'. Luego, establece una consecuencia lógica y respetuosa. 'Ahora, juntos vamos a limpiar lo que se derramó. Aquí tienes un trapo'."
+        },
+        {
+            "tema": "Reconocer y validar las emociones de los hijos",
+            "situacion": "Tu hijo llora porque se le rompió su juguete favorito y tú piensas que es una tontería.",
+            "solucion": "Solución Positiva: Para él no es una tontería. Valida su emoción. 'Entiendo que estés muy triste. Sé que ese juguete era muy especial para ti. Estoy aquí para darte un abrazo si lo necesitas'. Validar no es estar de acuerdo, es aceptar el sentimiento del otro como real."
+        },
+        {
+            "tema": "El impacto de la violencia verbal",
+            "situacion": "En un momento de rabia, le dices a tu hijo: '¡Eres un desastre!'.",
+            "solucion": "Solución Positiva: Repara el daño tan pronto como te calmes. 'Hijo, lo que te dije antes estuvo muy mal. No eres un desastre, yo estaba muy enojado y usé palabras hirientes. Lo siento mucho'. Las etiquetas negativas dañan la autoestima. La reparación enseña humildad y respeto."
+        },
+        {
+            "tema": "Cómo gestionar el enojo de los padres",
+            "situacion": "Sientes que vas a explotar por el caos en la casa.",
+            "solucion": "Solución Positiva: Anuncia tu necesidad de una pausa. 'Mamá/Papá se siente muy abrumado/a ahora mismo. Necesito 5 minutos en mi cuarto para calmarme. Ahora vuelvo'. Esto modela una estrategia de regulación emocional saludable y previene decir o hacer algo de lo que te arrepientas."
+        },
+        {
+            "tema": "Autocontrol y regulación emocional",
+            "situacion": "Tu hija se frustra con un rompecabezas y lanza las piezas.",
+            "solucion": "Solución Positiva: Ayúdala a nombrar la emoción. '¡Qué frustrante es cuando las piezas no encajan!'. Ofrécele una alternativa para canalizar esa energía. '¿Qué tal si apretamos muy fuerte esta almohada o saltamos tres veces para sacar esa frustración? Luego podemos intentarlo de nuevo'."
+        },
+        {
+            "tema": "Roles parentales y corresponsabilidad",
+            "situacion": "Uno de los padres siente que toda la carga de la disciplina recae sobre él/ella.",
+            "solucion": "Solución Positiva: Es crucial tener una conversación en pareja sin los niños presentes. 'Siento que estoy siendo el/la único/a que pone límites. Necesito que seamos un equipo. ¿Cómo podemos apoyarnos mutuamente para ser consistentes?'. Acuerden 2 o 3 reglas no negociables y apóyense mutuamente en su aplicación."
+        },
+        {
+            "tema": "La importancia del padre en la crianza positiva",
+            "situacion": "El padre piensa que su rol es solo 'jugar rudo' y la madre se encarga de lo 'emocional'.",
+            "solucion": "Solución Positiva: El rol del padre es multifacético. Anima al padre a involucrarse en todas las áreas: leer cuentos, ayudar con la tarea, tener conversaciones sobre los sentimientos. El juego físico es fantástico, pero la conexión emocional con el padre es igual de crucial para un desarrollo sano."
+        },
+        {
+            "tema": "Crianza compartida y acuerdos entre cuidadores",
+            "situacion": "Los padres están divorciados y tienen reglas completamente diferentes en cada casa.",
+            "solucion": "Solución Positiva: Aunque la crianza sea separada, la comunicación es clave. 'Sé que tenemos estilos diferentes, pero por el bien de nuestro hijo, ¿podemos acordar 3 reglas básicas (hora de dormir, tiempo de pantalla, respeto) que sean iguales en ambas casas?'. La consistencia da seguridad al niño."
+        },
+        {
+            "tema": "Inclusión de los abuelos y familia extendida",
+            "situacion": "Los abuelos constantemente desautorizan tus reglas dándole dulces al niño cuando has dicho que no.",
+            "solucion": "Solución Positiva: Habla con ellos en privado y con respeto. 'Mamá/Papá, valoro muchísimo su amor por mi hijo. Me ayudaría mucho si pudieran apoyar las reglas que estamos estableciendo, como la de los dulces. Para él es importante que todos estemos en la misma página'. Agradece su rol, pero establece límites claros."
+        },
+        {
+            "tema": "La influencia de los hermanos en la crianza",
+            "situacion": "El hermano mayor siempre acusa al pequeño, y el pequeño siempre se victimiza.",
+            "solucion": "Solución Positiva: Evita tomar partido. Fomenta que resuelvan sus problemas. 'Suena a que ambos estáis frustrados. ¿Qué solución se les ocurre para que esto no vuelva a pasar?'. No fomentes el rol de 'chivato' ni de 'víctima'. Trátalos como un equipo que debe aprender a convivir."
+        },
+        {
+            "tema": "Construcción de rutinas familiares saludables",
+            "situacion": "Las mañanas en casa son un caos de gritos y prisas.",
+            "solucion": "Solución Positiva: Una rutina visual puede hacer maravillas. Crea un cartel con dibujos o fotos de los pasos matutinos: 1. Despertar, 2. Vestirse, 3. Desayunar, 4. Lavarse los dientes, 5. Zapatos y mochila. Prepara todo lo posible la noche anterior. Las rutinas dan previsibilidad y seguridad."
+        },
+        {
+            "tema": "La sobreprotección y sus consecuencias",
+            "situacion": "Tu hijo de 8 años puede atarse los cordones, pero tú lo haces por él para 'ir más rápido'.",
+            "solucion": "Solución Positiva: Detente. Cada vez que haces por tu hijo algo que él puede hacer por sí mismo, le estás enviando el mensaje 'tú no eres capaz'. Permítele el tiempo para que lo haga, aunque se tarde. La autonomía es un regalo que fomenta la autoestima y la resiliencia."
+        },
+        {
+            "tema": "El equilibrio entre libertad y límites",
+            "situacion": "Tu hijo adolescente quiere ir a una fiesta, pero no te da detalles de dónde es o quién estará allí.",
+            "solucion": "Solución Positiva: El principio es 'confianza con verificación'. 'Confío en ti, pero mi trabajo como padre/madre es garantizar tu seguridad. Necesito la dirección, el nombre y teléfono de un adulto responsable. Esas son las condiciones para que puedas ir'. Los límites claros demuestran amor y preocupación, no desconfianza."
+        },
+        {
+            "tema": "Cómo criar en contextos de familias monoparentales",
+            "situacion": "Como padre/madre soltero/a, te sientes culpable por no poder 'darle' a tu hijo una familia 'completa'.",
+            "solucion": "Solución Positiva: Deshazte de la culpa. Una familia monoparental llena de amor, seguridad y respeto es infinitamente mejor que una familia de dos padres llena de conflictos. Enfócate en la calidad de tu vínculo. Construye una 'tribu' de apoyo con amigos y familiares. Tu hijo necesita un cuidador feliz y presente, no dos."
+        },
+        {
+            "tema": "Crianza en familias reconstituidas",
+            "situacion": "Tu nueva pareja intenta disciplinar a tu hijo y este le responde 'tú no eres mi papá/mamá'.",
+            "solucion": "Solución Positiva: Es fundamental establecer roles. El padre/madre biológico sigue siendo el principal responsable de la disciplina. La nueva pareja debe enfocarse primero en construir una relación de confianza y amistad. Su rol es de apoyo al padre biológico, no de reemplazo. Acuerden esto en privado."
+        },
+        {
+            "tema": "Estimulación temprana en los primeros años",
+            "situacion": "Te preocupa que tu hijo de 2 años no esté aprendiendo lo suficiente.",
+            "solucion": "Solución Positiva: La mejor estimulación no viene de 'flashcards' o apps, sino de la interacción contigo. Háblale mucho, léele cuentos, canten canciones, salgan al parque a explorar texturas y olores. El juego libre y la conversación son el alimento principal del cerebro en desarrollo."
+        },
+        {
+            "tema": "Juego como herramienta de aprendizaje",
+            "situacion": "Tu hijo solo quiere jugar y no quiere hacer 'actividades educativas'.",
+            "solucion": "Solución Positiva: ¡El juego ES una actividad educativa! Jugar con bloques enseña física y matemáticas. Jugar a disfrazarse enseña empatía y lenguaje. No subestimes el poder del juego libre. Únete a su juego y expande el aprendizaje desde dentro. '¿Esa torre que construyes es para un dinosaurio o para un astronauta?'."
+        },
+        {
+            "tema": "Tiempo de calidad vs. cantidad de tiempo",
+            "situacion": "Trabajas mucho y sientes que no pasas suficiente tiempo con tus hijos.",
+            "solucion": "Solución Positiva: No te culpes. Enfócate en la calidad. 15 minutos de tiempo de calidad son más valiosos que 2 horas de estar en la misma habitación pero distraído con el móvil. Tiempo de calidad es: contacto visual, escucha activa, y dedicación exclusiva. 'Estos 15 minutos son solo para ti. ¿A qué jugamos?'."
+        },
+        {
+            "tema": "Importancia de la lectura desde la infancia",
+            "situacion": "A tu hijo no le interesa leer.",
+            "solucion": "Solución Positiva: No lo fuerces. Encuentra el formato adecuado. ¿Le gustan los cómics? ¡Perfecto! ¿Los audiolibros? ¡Genial! ¿Revistas sobre dinosaurios? ¡Fantástico! Lo importante es que asocie la lectura con el placer, no con una obligación. Y sobre todo, que te vea leer a ti."
+        },
+        {
+            "tema": "Desarrollo de la autoestima",
+            "situacion": "Tu hija dice 'soy mala para las matemáticas'.",
+            "solucion": "Solución Positiva: Cambia el enfoque del resultado al proceso y la mentalidad de crecimiento. 'Las matemáticas son un desafío, pero no es que seas mala. Es que todavía no hemos encontrado la forma de que las entiendas. Vamos a probar un método diferente. Elogia su esfuerzo: '¡Me encanta cómo no te rendiste en ese problema!'."
+        },
+        {
+            "tema": "Fomentar la autonomía e independencia",
+            "situacion": "Vistes a tu hijo de 6 años por las mañanas para ir más rápido.",
+            "solucion": "Solución Positiva: Invierte tiempo ahora para ahorrar tiempo después. Permítele elegir su ropa (entre dos opciones que tú apruebes) y vestirse solo, aunque tarde más. Cada tarea que delegas en él es un ladrillo en la construcción de su autoconfianza y capacidad."
+        },
+        {
+            "tema": "Preparar a los hijos para la resiliencia",
+            "situacion": "Tu hijo no fue invitado a una fiesta de cumpleaños y está desolado.",
+            "solucion": "Solución Positiva: No minimices su dolor ('no es para tanto'). Valídalo: 'Entiendo que te sientas muy triste y excluido. Es normal sentirse así'. No corras a 'solucionarlo'. Acompáñalo en su tristeza. La resiliencia no es no caer, es aprender a levantarse. Superar pequeñas decepciones le fortalece para el futuro."
+        },
+        {
+            "tema": "Educación en valores desde casa",
+            "situacion": "Tu hijo ve en la televisión comportamientos que van en contra de tus valores.",
+            "solucion": "Solución Positiva: No cambies de canal sin más. Úsalo como una oportunidad de diálogo. '¿Qué te pareció lo que hizo ese personaje? En nuestra familia, creemos que es más importante ser amable que tener razón. ¿Por qué crees que lo decimos?'."
+        },
+        {
+            "tema": "El rol de la escuela en la crianza positiva",
+            "situacion": "El maestro de tu hijo te dice que es muy inquieto en clase.",
+            "solucion": "Solución Positiva: Forma un equipo con el maestro. 'Gracias por decírmelo. En casa también tiene mucha energía. ¿Qué estrategias podemos usar, tanto en casa como en la escuela, para ayudarle a concentrarse mejor?'. La colaboración es fundamental."
+        },
+        {
+            "tema": "Colaboración entre padres y maestros",
+            "situacion": "No estás de acuerdo con un método que usa el maestro.",
+            "solucion": "Solución Positiva: Pide una reunión y acude con una actitud de colaboración, no de confrontación. 'Me gustaría entender mejor el método que usan para [tema]. En casa hemos notado [esto]. ¿Cómo podemos trabajar juntos para apoyar a nuestro hijo?'. El objetivo común es el bienestar del niño."
+        },
+        {
+            "tema": "Responsabilidad en las acciones",
+            "situacion": "Tu hijo rompió un juguete de su amigo sin querer.",
+            "solucion": "Solución Positiva: Enséñale a hacerse responsable. No se trata de castigar, sino de reparar. 'Entiendo que fue un accidente, pero el juguete de tu amigo está roto. ¿Qué podemos hacer para solucionarlo?'. Ayúdale a pensar en opciones: pegarlo, ofrecer una disculpa sincera, o incluso ofrecer uno de sus propios juguetes."
+        },
+        {
+            "tema": "Honestidad y coherencia en la vida cotidiana",
+            "situacion": "En la tienda te dan cambio de más y te das cuenta delante de tu hijo.",
+            "solucion": "Solución Positiva: Tienes una oportunidad de oro. '¡Mira, el señor se equivocó y nos dio dinero de más! Vamos a devolvérselo. Lo correcto es ser honestos'. Tu coherencia en actos pequeños construye su brújula moral para decisiones grandes."
+        },
+        {
+            "tema": "Respeto a los demás como base social",
+            "situacion": "Tu hijo se burla de otro niño en el parque.",
+            "solucion": "Solución Positiva: Intervén con firmeza y en privado. 'En nuestra familia, no nos burlamos de los demás. Las palabras pueden herir igual que los golpes. ¿Cómo te sentirías tú si se rieran de ti?'. Fomenta la empatía como el antídoto de la burla."
+        },
+        {
+            "tema": "Empatía y solidaridad en la infancia",
+            "situacion": "Ves a una persona pidiendo ayuda en la calle.",
+            "solucion": "Solución Positiva: No ignores la situación. Conviértela en una lección. 'Esa persona necesita ayuda. Podemos comprarle una botella de agua o algo de comer'. Involucra a tu hijo en el acto de dar. La solidaridad se aprende practicándola."
+        },
+        {
+            "tema": "Cooperación y trabajo en equipo",
+            "situacion": "Tus dos hijos quieren construir torres, pero cada uno por su lado y compitiendo.",
+            "solucion": "Solución Positiva: Propón un reto cooperativo. '¿Qué les parece si en lugar de dos torres pequeñas, construimos juntos la torre más alta del mundo? ¡Necesitaremos trabajar en equipo! Tú pones los bloques de abajo y tú los de arriba'."
+        },
+        {
+            "tema": "Perseverancia y disciplina",
+            "situacion": "Tu hija quiere aprender a patinar pero se cae y quiere rendirse al primer intento.",
+            "solucion": "Solución Positiva: Valida la dificultad y elogia el esfuerzo. '¡Es difícil al principio! A mí también me costó. ¡Pero fuiste muy valiente al intentarlo! Descansemos un minuto y probemos de nuevo, solo hasta esa farola. Cada paso cuenta'."
+        },
+        {
+            "tema": "Gratitud y reconocimiento de lo recibido",
+            "situacion": "Es su cumpleaños y después de abrir 10 regalos, pregunta '¿no hay más?'.",
+            "solucion": "Solución Positiva: Fomenta el ritual de la gratitud. Por cada regalo que abra, debe detenerse y dar las gracias a la persona que se lo dio. Más tarde, ayúdale a escribir o dibujar notas de agradecimiento. La gratitud se cultiva activamente."
+        },
+        {
+            "tema": "Justicia y equidad en la familia",
+            "situacion": "Tu hijo de 7 años se queja: '¡No es justo! A mi hermano mayor le dejas acostarse más tarde'.",
+            "solucion": "Solución Positiva: Explica la diferencia entre justo y equitativo. 'Justo no significa que todos tengamos lo mismo. Significa que cada uno tiene lo que necesita según su edad y sus responsabilidades. Cuando tengas su edad, tú también te acostarás un poco más tarde'."
+        },
+        {
+            "tema": "Diversidad, tolerancia e inclusión",
+            "situacion": "Tu hijo hace una pregunta incómoda en voz alta sobre una persona con discapacidad que ven en la calle.",
+            "solucion": "Solución Positiva: Con calma, responde de forma sencilla y directa. 'Su cuerpo funciona de una manera diferente al nuestro'. Más tarde, en casa, busca un libro o un video que hable sobre el tema. Enseña que las diferencias son normales y que todas las personas merecen respeto."
+        },
+        {
+            "tema": "Participación ciudadana desde la infancia",
+            "situacion": "El parque de vuestro barrio está sucio.",
+            "solucion": "Solución Positiva: Pasa de la queja a la acción. 'Es una pena que el parque esté así. ¿Qué podemos hacer nosotros?'. Organicen una pequeña 'expedición de limpieza' en familia, con guantes y bolsas. Enséñale que los ciudadanos cuidan los espacios que son de todos."
+        },
+        {
+            "tema": "Uso responsable de la tecnología",
+            "situacion": "Tu hijo quiere tener su primer móvil.",
+            "solucion": "Solución Positiva: En lugar de un sí o un no rotundo, crea un 'contrato de uso del móvil' juntos. Incluyan reglas claras sobre tiempos de uso, apps permitidas, no usarlo en la mesa, y la regla de oro: los padres siempre deben tener la contraseña. Es una herramienta, no un derecho."
+        },
+        {
+            "tema": "Manejo del tiempo frente a pantallas",
+            "situacion": "Tu hijo pasa horas viendo videos en YouTube o TikTok.",
+            "solucion": "Solución Positiva: Establece 'zonas libres de pantallas' (como los dormitorios) y 'horarios libres de pantallas' (como durante las comidas). Usa un temporizador visual. Y lo más importante: ofrece alternativas atractivas. 'Cuando se acabe el tiempo de pantalla, ¿salimos a jugar al balón o hacemos un pastel?'."
+        },
+        {
+            "tema": "Influencia de las redes sociales en los hijos",
+            "situacion": "Tu hija adolescente está obsesionada con los 'likes' y su apariencia en Instagram.",
+            "solucion": "Solución Positiva: Mantén una comunicación abierta. Pregúntale sobre sus 'influencers' favoritos. Habla sobre la diferencia entre la vida real y la vida 'curada' de las redes. Fomenta su autoestima en base a sus talentos, su carácter y sus logros reales, no en su popularidad online."
+        },
+        {
+            "tema": "Crianza en contextos de pobreza o violencia",
+            "situacion": "Vives en un entorno complicado y te preocupa cómo afecta a tu hijo.",
+            "solucion": "Solución Positiva: Tu hogar debe ser su refugio seguro. Aunque no puedas controlar el exterior, puedes controlar el ambiente dentro de casa. Las rutinas, el amor incondicional, la comunicación y la validación emocional son aún más cruciales. Conviértete en su base segura desde la que explorar un mundo difícil."
+        },
+        {
+            "tema": "Migración y crianza en familias transnacionales",
+            "situacion": "Has migrado y tu hijo se siente dividido entre dos culturas.",
+            "solucion": "Solución Positiva: Celebra ambas culturas. Cocinen platos de tu país de origen, mientras aprenden y adoptan las tradiciones del nuevo país. Ayúdale a ver su biculturalismo como un superpoder, no como una debilidad. Le da una perspectiva del mundo más rica y amplia."
+        },
+        {
+            "tema": "Prevención de adicciones desde la crianza positiva",
+            "situacion": "Te preocupa que tu hijo adolescente pueda empezar a fumar o beber.",
+            "solucion": "Solución Positiva: La mejor prevención es una autoestima fuerte y una buena comunicación. Habla sobre el tema de forma abierta y sin alarmismos. 'Sé que en algunas fiestas hay alcohol. Quiero que sepas los riesgos y que confíes en mí para llamarme si alguna vez te sientes en una situación incómoda, sin miedo a que te castigue'."
+        },
+        {
+            "tema": "Manejo de la presión académica y social",
+            "situacion": "Tu hijo está agobiado por los exámenes y por 'ser popular'.",
+            "solucion": "Solución Positiva: Prioriza su bienestar sobre las notas. 'Tu nota no define quién eres. Quiero que te esfuerces, pero tu salud y tu felicidad son lo primero'. Asegúrate de que tenga tiempo para el ocio, el descanso y simplemente 'no hacer nada'. Enséñale técnicas de relajación como la respiración profunda."
+        },
+        {
+            "tema": "Crianza en contextos de diversidad cultural",
+            "situacion": "En la escuela de tu hijo hay niños de muchas nacionalidades y religiones diferentes.",
+            "solucion": "Solución Positiva: ¡Qué oportunidad tan maravillosa! Anímale a hacer amigos de diferentes orígenes. Invita a sus amigos a casa. Cocinen un plato típico de otro país. Lee libros sobre diferentes festividades del mundo. La diversidad es una fuente de riqueza y aprendizaje incalculable."
+        },
+        {
+            "tema": "Conciliación entre trabajo y vida familiar",
+            "situacion": "Llegas a casa del trabajo agotado/a y sin energía para jugar.",
+            "solucion": "Solución Positiva: Sé honesto y establece un ritual de transición. 'He tenido un día muy largo y mi cerebro está cansado. Necesito 15 minutos para cambiarme y respirar. Después de eso, soy todo/a tuyo/a'. A veces, el 'juego tranquilo' (leer juntos, dibujar) es igual de valioso."
+        },
+        {
+            "tema": "Autocuidado parental: “no puedes dar lo que no tienes”",
+            "situacion": "Te sientes culpable por tomarte una hora para ti, para ir al gimnasio o leer un libro.",
+            "solucion": "Solución Positiva: El autocuidado no es egoísta, es necesario. Es como la mascarilla de oxígeno en los aviones: primero te la pones tú para poder ayudar a los demás. Un padre/madre descansado/a y feliz tiene más paciencia y energía. Tu bienestar es un regalo para tu hijo."
+        }
+    ],
+    "valores": [
+        {
+            "nombre": "Respeto",
+            "definicion": "Es tratar a los demás con la misma consideración con la que nos gustaría ser tratados, valorando sus ideas y sentimientos aunque sean diferentes a los nuestros.",
+            "accion": "Acción de hoy: Pide a tus hijos que durante la cena, cada uno escuche la historia del otro sin interrumpir. Practiquen el arte de escuchar."
+        },
+        {
+            "nombre": "Honestidad",
+            "definicion": "Es actuar y hablar siempre con la verdad, siendo sinceros con nosotros mismos y con los demás, incluso cuando es difícil.",
+            "accion": "Acción de hoy: Si cometes un pequeño error (ej. derramar algo), admítelo abiertamente y sin excusas frente a tus hijos. '¡Uy, me equivoqué! Voy a limpiarlo'. Modelar la honestidad en lo pequeño es fundamental."
+        },
+        {
+            "nombre": "Empatía",
+            "definicion": "Es la capacidad de ponerse en el lugar del otro, de entender y compartir sus sentimientos. Es el pegamento que une a las personas.",
+            "accion": "Acción de hoy: Si ven a un personaje triste en una película o cuento, pausa y pregunta: '¿Cómo crees que se siente él/ella? ¿Qué le dirías para que se sintiera mejor?'."
+        },
+        {
+            "nombre": "Responsabilidad",
+            "definicion": "Es cumplir con nuestros compromisos y hacernos cargo de las consecuencias de nuestras acciones. Es cuidar de nuestras cosas y nuestras tareas.",
+            "accion": "Acción de hoy: Asigna una nueva tarea pequeña y visible a tu hijo/a (ej. 'Tú eres el encargado de ponerle agua a la mascota hoy'). Celebra cuando lo cumpla sin que se lo tengas que recordar."
+        },
+        {
+            "nombre": "Generosidad",
+            "definicion": "Es compartir lo que tenemos con los demás, no solo cosas materiales, sino también nuestro tiempo y nuestra atención, sin esperar nada a cambio.",
+            "accion": "Acción de hoy: Pídele a tu hijo que elija un juguete que ya no use mucho para donarlo a un niño que no tenga. Explícale la alegría que sentirá ese otro niño."
+        },
+        {
+            "nombre": "Paciencia",
+            "definicion": "Es la capacidad de esperar con calma y de perseverar ante las dificultades o cuando las cosas no suceden tan rápido como quisiéramos.",
+            "accion": "Acción de hoy: Hagan una actividad que requiera paciencia, como plantar una semilla. Explícale que necesitará tiempo, agua y sol para crecer, y que la esperarán juntos."
+        },
+        {
+            "nombre": "Gratitud",
+            "definicion": "Es reconocer y apreciar las cosas buenas que tenemos en nuestra vida, grandes o pequeñas, y a las personas que nos ayudan y nos quieren.",
+            "accion": "Acción de hoy: En la cena, que cada miembro de la familia diga tres cosas por las que está agradecido en el día de hoy. ¡Empieza tú para dar el ejemplo!"
+        },
+        {
+            "nombre": "Tolerancia",
+            "definicion": "Es aceptar y respetar las diferencias de los demás, ya sea en sus opiniones, su cultura o su forma de ser, aunque no las compartamos.",
+            "accion": "Acción de hoy: Lean un libro o vean un video sobre una cultura diferente. Hablen sobre las cosas que les parecen interesantes y diferentes a las suyas de una manera positiva."
+        },
+        {
+            "nombre": "Amistad",
+            "definicion": "Es el afecto y la confianza que compartimos con personas especiales. Un amigo es alguien que nos apoya, nos escucha y con quien nos divertimos.",
+            "accion": "Acción de hoy: Anima a tu hijo a hacer un dibujo o una pequeña tarjeta para su mejor amigo/a, solo para decirle 'gracias por ser mi amigo'."
+        },
+        {
+            "nombre": "Compromiso",
+            "definicion": "Es la decisión de esforzarse por cumplir una promesa o alcanzar una meta, incluso cuando aparecen obstáculos.",
+            "accion": "Acción de hoy: Empiecen un rompecabezas de varias piezas en familia y establezcan el compromiso de poner al menos 10 piezas cada día hasta terminarlo."
+        },
+        {
+            "nombre": "Humildad",
+            "definicion": "Es reconocer nuestras propias fortalezas y debilidades sin presumir de las primeras ni avergonzarnos de las segundas. Es saber que siempre podemos aprender de los demás.",
+            "accion": "Acción de hoy: Cuando juegues a algo con tu hijo y ganes, evita presumir. Di algo como '¡Qué buena partida! Me has hecho esforzarme mucho. Casi me ganas'."
+        },
+        {
+            "nombre": "Perdón",
+            "definicion": "Es la capacidad de dejar ir el enojo o el rencor hacia alguien que nos ha lastimado, y también de pedir perdón cuando cometemos un error.",
+            "accion": "Acción de hoy: Habla sobre un momento en el que tuviste que perdonar a alguien. Explica que perdonar te hizo sentir más ligero y en paz, sin entrar en detalles dolorosos."
+        },
+        {
+            "nombre": "Curiosidad",
+            "definicion": "Es el deseo de aprender y descubrir cosas nuevas. Es el motor del conocimiento y la creatividad.",
+            "accion": "Acción de hoy: Cuando tu hijo te haga una pregunta de '¿Por qué...?', en lugar de dar la respuesta directamente, di 'Esa es una pregunta excelente. ¿Por qué no lo investigamos juntos?'. Busquen la respuesta en un libro o en internet."
+        },
+        {
+            "nombre": "Autocontrol",
+            "definicion": "Es la habilidad de manejar nuestras emociones y nuestros impulsos para tomar mejores decisiones, especialmente cuando estamos enojados o frustrados.",
+            "accion": "Acción de hoy: Creen un 'rincón de la calma' con cojines o peluches. Explícale que cuando sienta una emoción muy fuerte, puede ir a ese rincón a respirar profundo hasta sentirse mejor."
+        },
+        {
+            "nombre": "Valentía",
+            "definicion": "No es la ausencia de miedo, sino hacer lo correcto a pesar de tener miedo. Es defender a alguien o intentar algo nuevo y difícil.",
+            "accion": "Acción de hoy: Anímale a probar algo que le dé un poco de miedo pero que sea seguro, como subirse a un tobogán un poco más alto. Celebra su valentía por intentarlo, sin importar el resultado."
+        }
+    ]
+}

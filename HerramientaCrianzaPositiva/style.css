@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #005a9c; /* Azul oscuro */
+    --secondary-color: #fdb813; /* Amarillo */
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+header .subtitle {
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+header .author {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-bg);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+/* Semaforo */
+.semaforo-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.semaforo-light {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid rgba(0,0,0,0.2);
+}
+
+.semaforo-light:hover {
+    transform: scale(1.1);
+}
+
+.semaforo-light.red { background-color: #ff4d4d; }
+.semaforo-light.yellow { background-color: #ffcc00; }
+.semaforo-light.green { background-color: #4caf50; }
+
+.semaforo-light.active {
+    box-shadow: 0 0 20px 5px var(--color, #fff);
+}
+
+.info-box, .card {
+    background-color: #eef5ff;
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    min-height: 100px;
+}
+
+.info-box h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.info-box p, .card p {
+    margin: 0;
+}
+
+.info-box .accion {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Cards y Botones */
+.card {
+    margin-bottom: 1rem;
+    border-left-color: var(--secondary-color);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #fdb100;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+    header .subtitle {
+        font-size: 1rem;
+    }
+    section {
+        padding: 1rem;
+    }
+    .semaforo-light {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.bottom-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button-container {
+    margin-top: 20px;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #6c757d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #5a6268;
+}
