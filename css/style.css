@@ -824,3 +824,85 @@ footer p {
 .btn-recurso:hover {
     background-color: #218838;
 }
+
+/* STYLES FOR MODAL */
+.event-cta {
+    margin-top: 10px;
+}
+
+.report-button {
+    background-color: #17a2b8; /* Color info */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+    background-color: #138496;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.recurso-icon-img {
+    width: 60%; /* Usar un porcentaje para la responsividad */
+    max-width: 160px; /* Un tamaño máximo para pantallas grandes */
+    height: auto; /* Mantener la proporción */
+    object-fit: contain;
+    margin: 0 auto 1.5rem auto; /* Centrado */
+}

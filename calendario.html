@@ -24,15 +24,15 @@
             <a href="index.html" class="nav-button">Inicio</a>
             <a href="acuerdo_convivencia.html" class="nav-button">Acuerdo de Convivencia</a>
             <a href="plan_trabajo.html" class="nav-button">Plan de Trabajo</a>
-            <a href="reporte_avances.html" class="nav-button">Reporte de Avances</a>
-            <a href="calendario.html" class="nav-button active">Calendario</a>
+            <a href="reporte_avances.html" class="nav-button">Avances</a>
+            <a href="calendario.html" class="nav-button active">Eventos e informes</a>
             <a href="recursos_apoyo.html" class="nav-button">Recursos de Apoyo</a>
         </div>
     </nav>
 
     <main>
         <section id="calendario">
-            <h2>Calendario de Eventos 2025-2026</h2>
+            <h2>Eventos e informes</h2>
             <p class="intro">Aquí encontrarás las fechas clave de los eventos, reuniones y actividades programadas para el ciclo escolar. ¡No te pierdas de nada!</p>
 
             <div class="month-container">
@@ -44,6 +44,9 @@
                             <img src="images/bandera_mexico.png" alt="Bandera de México" class="flag-icon">
                             <h4>Mañanita Mexicana</h4>
                             <p>Kermés Mexicana. ¡Habrá antojitos y juegos para los niños y los papás y familiares que deseen asistir!</p>
+                            <div class="event-cta">
+                                <button id="openReportBtn" class="report-button">Ver Informe de Rentabilidad</button>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -103,13 +106,48 @@
         <p>&copy; 2025 Asociación de Padres de Familia. Todos los derechos reservados. "Por una comunidad Unida en un Sólo Propósito"</p>
     </footer>
 
+    <!-- The Modal -->
+    <div id="reportModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="reportImage">
+      <div id="caption"></div>
+    </div>
+
     <script>
+        // Hamburger menu logic
         const hamburger = document.getElementById('hamburger-menu');
         const navLinks = document.getElementById('nav-links');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
+
+        // Modal logic
+        var modal = document.getElementById("reportModal");
+        var btn = document.getElementById("openReportBtn");
+        var span = document.getElementsByClassName("close-modal")[0];
+        var modalImg = document.getElementById("reportImage");
+        var captionText = document.getElementById("caption");
+
+        if (btn) {
+            btn.onclick = function() {
+              modal.style.display = "block";
+              modalImg.src = "images/reportemananita.jpg";
+              captionText.innerHTML = "Informe Resumido y Rentabilidad del Evento";
+            }
+        }
+
+        if (span) {
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
     </script>
 </body>
 </html>
