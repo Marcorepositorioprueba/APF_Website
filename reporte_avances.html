@@ -6,6 +6,44 @@
     <title>Reporte de Avances - APF 2025-2026</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .image-mosaic {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 1rem;
+            padding-right: 0; /* Override for this card */
+        }
+        .mosaic-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .mosaic-img:hover {
+            transform: scale(1.05);
+        }
+        .accion-card .image-mosaic + .status-badge {
+             right: 1.5rem; /* Restore original position */
+        }
+
+        @media (max-width: 768px) {
+            .image-mosaic {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .accion-card .image-mosaic + .status-badge {
+                position: static;
+                transform: none;
+                margin-top: 1rem;
+                align-self: flex-start;
+            }
+        }
+        /* Adjust accion-card padding when a mosaic is present */
+        .accion-card.has-mosaic {
+            padding-right: 1.5rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -37,6 +75,22 @@
             
             <div class="eje-reporte">
                 <h3>Eje 1: Infraestructura y Sustentabilidad</h3>
+                <div class="accion-card has-mosaic">
+                    <h4>Entrega de material de oficina, limpieza y herramienta</h4>
+                    <p><strong>Fecha:</strong> 25 de septiembre de 2025</p>
+                    <p><strong>Descripción:</strong> Por parte de la APF se realiza la entrega de material de oficina, limpieza y herramienta a la Dirección escolar, atendiendo la solicitud de insumos previamente realizada.</p>
+                    <div class="image-mosaic">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 09.55.13.jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 09.55.14.jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 09.55.14(1).jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 09.55.17.jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 09.55.17(1).jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 10.00.16.jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 10.00.16(1).jpeg" alt="Entrega de insumos" class="mosaic-img">
+                        <img src="images/entrega de insumos/WhatsApp Image 2025-09-25 at 10.00.16(2).jpeg" alt="Entrega de insumos" class="mosaic-img">
+                    </div>
+                    <div class="status-badge status-completado">Concluida</div>
+                </div>
                 <div class="accion-card">
                     <h4>Plan de Infraestructura Prioritario (Baños)</h4>
                     <p><strong>Avance:</strong> Se realizará el diagnóstico completo para preveer la reparación de fugas en los baños de niños. Una vez realizadas estas acciones, se adjuntarán facturas en el próximo informe financiero.</p>
@@ -90,13 +144,23 @@
                 <h3>Eje 4: Comunidad y Formación</h3>
                 <div class="accion-card">
                     <h4>Festejos y Eventos Comunitarios (Fiestas Patrias)</h4>
-                    <p><strong>Avance:</strong> Se ha definido el presupuesto y el programa para el evento del 12 de Septiembre.</p>
-                    <div class="status-badge status-en-progreso">En Progreso</div>
+                    <p><strong>Descripción:</strong> Celebración de la Mañanita Mexicana el 12 de Septiembre. Se anexa el informe de rentabilidad del evento para consulta.</p>
+                    <div class="event-cta">
+                        <button id="openReportBtn" class="report-button">Ver Informe de Rentabilidad</button>
+                    </div>
+                    <div class="status-badge status-completado">Concluido</div>
                 </div>
             </div>
 
         </section>
     </main>
+
+    <!-- The Modal -->
+    <div id="reportModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="reportImage">
+      <div id="caption"></div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Asociación de Padres de Familia. Todos los derechos reservados."Por una comunidad Unida en un Sólo Propósito"</p>
@@ -109,6 +173,33 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
+
+        // Modal logic
+        var modal = document.getElementById("reportModal");
+        var btn = document.getElementById("openReportBtn");
+        var span = document.getElementsByClassName("close-modal")[0];
+        var modalImg = document.getElementById("reportImage");
+        var captionText = document.getElementById("caption");
+
+        if (btn) {
+            btn.onclick = function() {
+              modal.style.display = "block";
+              modalImg.src = "images/reportemananita.jpg";
+              captionText.innerHTML = "Informe Resumido y Rentabilidad del Evento";
+            }
+        }
+
+        if (span) {
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
     </script>
 </body>
 </html>

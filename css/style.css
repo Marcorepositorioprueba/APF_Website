@@ -900,9 +900,9 @@ footer p {
     cursor: pointer;
 }
 .recurso-icon-img {
-    width: 60%; /* Usar un porcentaje para la responsividad */
-    max-width: 160px; /* Un tamaño máximo para pantallas grandes */
-    height: auto; /* Mantener la proporción */
-    object-fit: contain;
+    width: 160px;           /* Ancho fijo para consistencia */
+    height: 160px;          /* Alto fijo para que todas sean iguales */
+    object-fit: cover;      /* Asegura que la imagen cubra el área, recortando si es necesario */
     margin: 0 auto 1.5rem auto; /* Centrado */
+    border-radius: 8px;     /* Suaviza las esquinas */
 }

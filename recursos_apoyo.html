@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos de Apoyo - Asociación de Padres de Familia</title>
     <link rel="stylesheet" href="css/style.css?v=1.1">
+    <style>
+        .click-counter {
+            font-size: 0.8em;
+            color: #6c757d;
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,18 +40,21 @@
     <main>
         <section id="recursos">
             <h2>Recursos de Apoyo para Padres</h2>
+            <p style="text-align: center; font-size: 0.9em; color: #555; margin-bottom: 30px;">Esta sección ha sido visitada <strong id="recursos-visitas-count">...</strong> veces.</p>
             <div class="recursos-grid">
                 <div class="recurso-card">
                     <img src="images/calculo.png" alt="Cálculo Mental" class="recurso-icon-img">
                     <h3>Cálculo Mental para Primaria</h3>
                     <p>Una herramienta interactiva para que los niños practiquen y mejoren sus habilidades de cálculo mental en suma, resta, multiplicación y división.</p>
-                    <a href="calculo_mental_primaria/index.html" class="btn-recurso" target="_blank">Ir a la Herramienta</a>
+                    <a href="calculo_mental_primaria/index.html" id="tool-calculo" class="btn-recurso" target="_blank">Ir a la Herramienta</a>
+                    <p class="click-counter">Consultado <strong id="tool-calculo-count">...</strong> veces</p>
                 </div>
                 <div class="recurso-card">
                     <img src="images/crianza.png" alt="Crianza Positiva" class="recurso-icon-img">
                     <h3>Herramienta de Crianza Positiva</h3>
                     <p>Una guía con recursos y consejos prácticos para fomentar un ambiente familiar positivo y constructivo, fortaleciendo la relación con sus hijos.</p>
-                    <a href="HerramientaCrianzaPositiva/index.html" class="btn-recurso" target="_blank">Ir a la Herramienta</a>
+                    <a href="HerramientaCrianzaPositiva/index.html" id="tool-crianza" class="btn-recurso" target="_blank">Ir a la Herramienta</a>
+                    <p class="click-counter">Consultado <strong id="tool-crianza-count">...</strong> veces</p>
                 </div>
             </div>
         </section>
@@ -54,11 +65,66 @@
     </footer>
 
     <script>
+        // Script para menú hamburguesa
         const hamburger = document.getElementById('hamburger-menu');
         const navLinks = document.getElementById('nav-links');
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('show');
+        });
+
+        // --- Lógica de Contadores ---
+        const namespace = 'apf-website'; // Namespace único para todos los contadores de este sitio
+
+        // Función para actualizar (y obtener) un contador. Se usa para page views y clics.
+        function updateCount(key, elementId) {
+            const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    const el = document.getElementById(elementId);
+                    if (el) el.innerText = data.value;
+                })
+                .catch(error => console.error('Error al actualizar contador:', error));
+        }
+
+        // Función para solo obtener el valor de un contador, sin incrementarlo. Se usa para mostrar los clics iniciales.
+        function getCount(key, elementId) {
+            const url = `https://api.countapi.xyz/get/${namespace}/${key}`;
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    const el = document.getElementById(elementId);
+                    if (el) el.innerText = data.value || 0; // Si el contador no existe, muestra 0
+                })
+                .catch(error => {
+                    const el = document.getElementById(elementId);
+                    if (el) el.innerText = 0; // Si hay un error (ej. 404), asume 0
+                });
+        }
+
+        // Ejecutar contadores cuando el contenido de la página esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Incrementar y mostrar las visitas de ESTA página
+            updateCount('recursos-page-views', 'recursos-visitas-count');
+
+            // 2. Obtener los conteos iniciales de clics para cada herramienta
+            getCount('tool-calculo-clicks', 'tool-calculo-count');
+            getCount('tool-crianza-clicks', 'tool-crianza-count');
+
+            // 3. Añadir listeners a los botones de las herramientas para contar los clics
+            const calculoBtn = document.getElementById('tool-calculo');
+            if (calculoBtn) {
+                calculoBtn.addEventListener('click', () => {
+                    updateCount('tool-calculo-clicks', 'tool-calculo-count');
+                });
+            }
+
+            const crianzaBtn = document.getElementById('tool-crianza');
+            if (crianzaBtn) {
+                crianzaBtn.addEventListener('click', () => {
+                    updateCount('tool-crianza-clicks', 'tool-crianza-count');
+                });
+            }
         });
     </script>
 </body>
