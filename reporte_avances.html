@@ -92,23 +92,28 @@
                     <div class="status-badge status-completado">Concluida</div>
                 </div>
                 <div class="accion-card">
-                    <h4>Plan de Infraestructura Prioritario (Baños)</h4>
+                    <h4>Plan de Infraestructura Prioritario (Baños, cisterna etc, adicionar)</h4>
                     <p><strong>Avance:</strong> Se realizará el diagnóstico completo para preveer la reparación de fugas en los baños de niños. Una vez realizadas estas acciones, se adjuntarán facturas en el próximo informe financiero.</p>
+                    <p>Para el diagnóstico se está dando seguimiento a los consumos con la creación de una herramienta digital.</p>
+                                        <img src="images/fotos infraestructura/agua.png" alt="Herramienta digital de seguimiento de consumos de agua" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="zoomable-img">
                     <div class="status-badge status-en-progreso">En Progreso</div>
                 </div>
                 <div class="accion-card">
                     <h4>Campaña de Consciente de Agua y Luz</h4>
-                    <p><strong>Avance:</strong> Se diseñarán y colocaran 15 carteles informativos en puntos clave de la escuela.</p>
-                    <div class="status-badge status-en-progreso">En Planeación</div>
+                    <p><strong>Avance:</strong> Actualmente, se están continuando con los trabajos derivados de la gestión de mejora de conducción de energía eléctrica.</p>
+                    <img src="images/fotos infraestructura/registro.jpg" alt="Trabajos de mejora de conducción de energía eléctrica" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="zoomable-img">
+                    <div class="status-badge status-en-progreso">En Progreso</div>
                 </div>
             </div>
 
             <div class="eje-reporte">
                 <h3>Eje 2: Bienestar y Apoyo Escolar</h3>
                 <div class="accion-card">
-                    <h4>Programa de Desayunos</h4>
-                    <p><strong>Avance:</strong> Se estará elaborando un censo de alumnos que podrían beneficiarse del programa.</p>
-                    <div class="status-badge status-en-progreso">En Planeación</div>
+                    <h4>Programa de Desayunos Escolares Calientes</h4>
+                    <p><strong>Avance:</strong> Se ha iniciado la coordinación con la Dirección Escolar para definir el proceso de identificación de alumnos candidatos, basado en los lineamientos del DIF. El objetivo es asegurar que el apoyo llegue a quienes más lo necesitan, con la colaboración clave de los docentes.</p>
+                    <p><strong>Próximo paso:</strong> Sesión informativa con el personal docente para la aplicación de un formulario de detección.</p>
+                    <img src="images/fotos infraestructura/desayunos.jpg" alt="Programa de Desayunos Escolares" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="zoomable-img">
+                    <div class="status-badge status-en-progreso">En Progreso</div>
                 </div>
                 <div class="accion-card">
                     <h4>Gestión Activa de Becas</h4>
@@ -122,6 +127,7 @@
                 <div class="accion-card">
                     <h4>Portal APF en línea</h4>
                     <p><strong>Avance:</strong> Se creó la página oficial de la APF, con el objeto de difundirse entre la comunidad de padres de familia, misma que podrá distribuirse a partir de un link para su fácil acceso. Tiene la ventaja de ser una página cerrada diferente al tipo Facebook</p>
+                    <img src="images/fotos infraestructura/portal.png" alt="Portal APF en línea" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="zoomable-img">
                     <div class="status-badge status-completado">Concluida</div>
                 </div>
             </div>
@@ -174,32 +180,52 @@
             navLinks.classList.toggle('show');
         });
 
-        // Modal logic
-        var modal = document.getElementById("reportModal");
-        var btn = document.getElementById("openReportBtn");
-        var span = document.getElementsByClassName("close-modal")[0];
-        var modalImg = document.getElementById("reportImage");
-        var captionText = document.getElementById("caption");
+        // --- Generic Modal Logic ---
+        const modal = document.getElementById("reportModal");
+        const modalImg = document.getElementById("reportImage");
+        const captionText = document.getElementById("caption");
+        const closeModalSpan = document.getElementsByClassName("close-modal")[0];
 
-        if (btn) {
-            btn.onclick = function() {
-              modal.style.display = "block";
-              modalImg.src = "images/reportemananita.jpg";
-              captionText.innerHTML = "Informe Resumido y Rentabilidad del Evento";
+        // Function to open the modal with specific content
+        function openModal(src, alt) {
+            if (modal && modalImg && captionText) {
+                modal.style.display = "block";
+                modalImg.src = src;
+                captionText.innerHTML = alt;
             }
         }
 
-        if (span) {
-            span.onclick = function() {
-              modal.style.display = "none";
+        // Close the modal
+        if(closeModalSpan) {
+            closeModalSpan.onclick = function() {
+                modal.style.display = "none";
             }
         }
-
         window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
+
+        // --- Event Listeners ---
+
+        // 1. For the specific report button
+        const reportBtn = document.getElementById("openReportBtn");
+        if (reportBtn) {
+            reportBtn.onclick = function() {
+                openModal("images/reportemananita.jpg", "Informe Resumido y Rentabilidad del Evento");
+            }
+        }
+
+        // 2. For all images that should be zoomable
+        // This includes the mosaic images and the one we just added
+        const zoomableImages = document.querySelectorAll('.zoomable-img, .mosaic-img');
+        zoomableImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.onclick = function() {
+                openModal(this.src, this.alt);
+            }
+        });
     </script>
 </body>
 </html>
