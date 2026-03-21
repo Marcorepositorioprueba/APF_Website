@@ -53,19 +53,13 @@
     -->
 
     <main>
-        <!-- Modal Rifa -->
+        <!-- Modal Herramientas -->
         <div id="raffleModal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px);">
-          <div style="background-color: #fff; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 80%; max-width: 550px; text-align: center; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); position: relative; background: linear-gradient(145deg, #fdfdfd, #f0f0f0); border-left: 5px solid #007bff; border-right: 5px solid #007bff;">
+          <div style="background-color: #fff; margin: 15% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 500px; text-align: center; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); position: relative;">
             <span id="closeModal" style="color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 32px; font-weight: bold; cursor: pointer;">&times;</span>
-            <h2 style="color: #0056b3; font-family: 'Arial', sans-serif; font-size: 2.2em;">¡Gran Rifa Escolar!</h2>
-            <img src="images/boletaje.png" alt="Boletos de la rifa" style="max-width: 60%; width: auto; margin-top: 15px; border-radius: 8px;">
-            <p style="font-size: 1.2em; color: #333; margin-top: 20px;"><b>Muchas gracias por ayudar a fortalecer a tu escuela.</b></p>
-            <p style="font-size: 1.1em; color: #555;">Tu participación es fundamental para nuestras mejoras.</p>
-            <div style="background-color: #e9ecef; padding: 15px; border-radius: 8px; margin-top: 20px;">
-                <p style="font-size: 1.2em; color: #333; margin: 0;"><b>Fecha de la rifa:</b> Febrero, en Reunión General.</p>
-            </div>
-            <a href="recursos_apoyo.html" style="display: inline-block; background-color: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; transition: background-color 0.3s;">
-                Visita las herramientas de apoyo para padres 2026
+            <p style="font-size: 1.4em; color: #333; margin-top: 10px;">Visita nuestras nuevas herramientas de acompañamiento para padres</p>
+            <a href="recursos_apoyo.html" style="display: inline-block; background-color: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold;">
+                Ver Herramientas
             </a>
           </div>
         </div>
@@ -182,7 +176,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('raffleModal');
     const closeModalBtn = document.getElementById('closeModal');
-    const modalShownKey = 'raffleModalShown_2026_02'; // Clave única para Febrero 2026
+    const modalShownKey = 'toolsModalShown_2026_03'; // Actualizado para herramientas de acompañamiento
 
     // Función para cerrar el modal
     const closeModal = () => {
