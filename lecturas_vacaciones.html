@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoyo en Lectoescritura - Vacaciones</title>
+    <link rel="stylesheet" href="css/herramienta_style.css">
+    <style>
+        /* Estilos propios de la herramienta - no tocan style.css global */
+        .texto-bloque {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .texto-bloque h3 {
+            color: #005a9c;
+            margin-top: 0;
+            border-bottom: 2px solid #e0f7fa;
+            padding-bottom: 8px;
+        }
+        .texto-bloque p.texto {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #333;
+        }
+        .texto-bloque .pregunta {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #f4f7f6;
+            border-left: 4px solid #005a9c;
+            border-radius: 4px;
+        }
+        .texto-bloque .pregunta p {
+            margin: 0 0 8px 0;
+            font-weight: 600;
+        }
+        .texto-bloque .pregunta label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+        }
+        .controles {
+            text-align: center;
+            margin: 25px auto;
+        }
+        .controles button {
+            background-color: #005a9c;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .controles button:hover { background-color: #003f70; }
+        .controles button.imprimir { background-color: #28a745; }
+        .controles button.imprimir:hover { background-color: #1e7e34; }
+        .resultado {
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 15px auto;
+            padding: 12px;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        .correcto { background-color: #d4edda; color: #155724; }
+        .incorrecto { background-color: #f8d7da; color: #721c24; }
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 15px auto;
+            font-size: 1.05em;
+            color: #555;
+        }
+        @media print {
+            .controles, header .nav-back, footer { display: none !important; }
+            .texto-bloque { box-shadow: none; border: 1px solid #ccc; }
+            body { background-color: white; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/escudo1.png" alt="Logo Escuela" class="logo">
+        <div class="header-text">
+            <h1>Apoyo en Lectoescritura</h1>
+            <h2>Actividades para Vacaciones · APF</h2>
+        </div>
+    </header>
+
+    <nav style="margin: 15px auto; text-align: center;">
+        <a href="recursos_apoyo.html" class="btn-regresar">&larr; Volver a Recursos</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            Lee cada texto con calma y responde las preguntas. Si una respuesta no te sale,
+            vuelve a leer el texto. Al final presiona <strong>Verificar respuestas</strong>.
+        </p>
+
+        <!-- ============ TEXTO 1 ============ -->
+        <div class="texto-bloque">
+            <h3>Texto 1: El día de playa</h3>
+            <p class="texto">
+                Era sábado y la familia de Lucía fue a la playa. El sol brillaba y el mar estaba tranquilo.
+                Lucía y su hermano Tomás jugaron con la arena y encontraron conchas de colores.
+                Su mamá preparó unos sándwiches y su papá instaló una sombrilla grande.
+                Después de comer, todos caminaron por la orilla y vieron un cangrejo muy pequeño
+                que corría hacia las rocas. Lucía se divirtió mucho y pidió volver el próximo sábado.
+            </p>
+
+            <div class="pregunta">
+                <p>1. ¿Qué día de la semana fueron a la playa?</p>
+                <label><input type="radio" name="p1" value="a"> Domingo</label>
+                <label><input type="radio" name="p1" value="b"> Sábado</label>
+                <label><input type="radio" name="p1" value="c"> Lunes</label>
+            </div>
+
+            <div class="pregunta">
+                <p>2. ¿Qué encontraron Lucía y Tomás en la arena?</p>
+                <label><input type="radio" name="p2" value="a"> Piedras brillantes</label>
+                <label><input type="radio" name="p2" value="b"> Caracoles grandes</label>
+                <label><input type="radio" name="p2" value="c"> Conchas de colores</label>
+            </div>
+
+            <div class="pregunta">
+                <p>3. ¿Qué vio Lucía cuando caminó por la orilla?</p>
+                <label><input type="radio" name="p3" value="a"> Un pez grande</label>
+                <label><input type="radio" name="p3" value="b"> Un cangrejo pequeño</label>
+                <label><input type="radio" name="p3" value="c"> Una tortuga</label>
+            </div>
+        </div>
+
+        <!-- ============ TEXTO 2 ============ -->
+        <div class="texto-bloque">
+            <h3>Texto 2: La ardilla curiosa</h3>
+            <p class="texto">
+                En un parque muy grande vivía una ardilla llamada Mishi. Era la más curiosa del barrio:
+                siempre estaba explorando, saltando de árbol en árbol y haciendo preguntas a los otros animales.
+                Un día, Mishi encontró una caja extraña cerca del lago. Era pequeña, de madera y tenía un
+                letrero que decía: "Para el animal más valiente". Mishi la abrió con cuidado y dentro había
+                una medalla dorada con su nombre grabado. Los demás animales aplaudieron porque Mishi,
+                con su curiosidad, había descubierto algo que nadie más se atrevía a buscar.
+            </p>
+
+            <div class="pregunta">
+                <p>4. ¿Cómo se llamaba la ardilla?</p>
+                <label><input type="radio" name="p4" value="a"> Luna</label>
+                <label><input type="radio" name="p4" value="b"> Mishi</label>
+                <label><input type="radio" name="p4" value="c"> Pelusa</label>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Qué encontró Mishi cerca del lago?</p>
+                <label><input type="radio" name="p5" value="a"> Una caja de madera</label>
+                <label><input type="radio" name="p5" value="b"> Un libro</label>
+                <label><input type="radio" name="p5" value="c"> Una semilla</label>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Por qué los animales aplaudieron a Mishi?</p>
+                <label><input type="radio" name="p6" value="a"> Porque cantó bonito</label>
+                <label><input type="radio" name="p6" value="b"> Porque corrió muy rápido</label>
+                <label><input type="radio" name="p6" value="c"> Porque encontró algo que nadie más se atrevía a buscar</label>
+            </div>
+        </div>
+
+        <!-- ============ TEXTO 3 ============ -->
+        <div class="texto-bloque">
+            <h3>Texto 3: El paseo en bicicleta</h3>
+            <p class="texto">
+                El domingo por la mañana, Emilio aprendió a andar en bicicleta sin ruedas auxiliares.
+                Su papá corría detrás de él, sosteniendo el asiento. Al principio Emilio se tambaleaba
+                y se bajó tres veces, pero no se rindió. A la cuarta intentona soltó el pie y pedaleó
+                solo durante unos segundos antes de caer en el pasto. Su papá aplaudió muy fuerte y le
+                dijo: "Lo lograste". Emilio se limpió las rodillas y volvió a subirse. Al mediodía ya
+                recorría toda la cuadra sonriendo, y el sol le daba en la cara como si lo estuviera
+                premiando por su esfuerzo.
+            </p>
+
+            <div class="pregunta">
+                <p>7. ¿Qué estaba aprendiendo Emilio?</p>
+                <label><input type="radio" name="p7" value="a"> A nadar en la piscina</label>
+                <label><input type="radio" name="p7" value="b"> A andar en bicicleta sin ruedas auxiliares</label>
+                <label><input type="radio" name="p7" value="c"> A patinar en línea</label>
+            </div>
+
+            <div class="pregunta">
+                <p>8. ¿Cuántas veces se bajó Emilio antes de pedalear solo?</p>
+                <label><input type="radio" name="p8" value="a"> Dos veces</label>
+                <label><input type="radio" name="p8" value="b"> Tres veces</label>
+                <label><input type="radio" name="p8" value="c"> Cuatro veces</label>
+            </div>
+
+            <div class="pregunta">
+                <p>9. ¿Qué sintió Emilio al pedalear solo por primera vez?</p>
+                <label><input type="radio" name="p9" value="a"> Miedo y ganas de parar</label>
+                <label><input type="radio" name="p9" value="b"> Alegría y ganas de seguir intentando</label>
+                <label><input type="radio" name="p9" value="c"> Enojo porque se cayó</label>
+            </div>
+        </div>
+
+        <!-- ============ TEXTO 4 ============ -->
+        <div class="texto-bloque">
+            <h3>Texto 4: El jardín de la abuela</h3>
+            <p class="texto">
+                Cada vez que Sofía visitaba a su abuela Rosa, lo que más le gustaba era recorrer el jardín.
+                Ahí crecían girasoles enormes, albahaca que olía a pizza y un limonero lleno de frutos
+                amarillos. La abuela le enseñó que las plantas necesitan tres cosas: agua, sol y paciencia.
+                Un día, Sofía decidió plantar su propia semilla de frijol en un vaso con tierra. La puso
+                junto a la ventana y la regaba todas las mañanas antes del desayuno. Pasaron quince días
+                y nada pasaba. Sofía quería tirar el vaso, pero su abuela le dijo: "A veces la naturaleza
+                es lenta, pero siempre cumple". Una semana después, brotó un tallito verde con dos
+                hojitas redondas. Sofía saltó de alegría y aprendió que la paciencia siempre trae premio.
+            </p>
+
+            <div class="pregunta">
+                <p>10. ¿Qué planta decidió sembrar Sofía?</p>
+                <label><input type="radio" name="p10" value="a"> Una semilla de girasol</label>
+                <label><input type="radio" name="p10" value="b"> Una semilla de frijol</label>
+                <label><input type="radio" name="p10" value="c"> Una semilla de limón</label>
+            </div>
+
+            <div class="pregunta">
+                <p>11. ¿Dónde puso Sofía el vaso con la semilla?</p>
+                <label><input type="radio" name="p11" value="a"> En la mesa del comedor</label>
+                <label><input type="radio" name="p11" value="b"> Junto a la ventana</label>
+                <label><input type="radio" name="p11" value="c"> En el refrigerador</label>
+            </div>
+
+            <div class="pregunta">
+                <p>12. ¿Cuál es la enseñanza principal del texto?</p>
+                <label><input type="radio" name="p12" value="a"> Las plantas no necesitan agua</label>
+                <label><input type="radio" name="p12" value="b"> Hay que tener paciencia porque la naturaleza cumple</label>
+                <label><input type="radio" name="p12" value="c"> Es mejor comprar plantas que sembrarlas</label>
+            </div>
+        </div>
+
+        <!-- ============ TEXTO 5 ============ -->
+        <div class="texto-bloque">
+            <h3>Texto 5: El planeta azul</h3>
+            <p class="texto">
+                Desde el espacio, la Tierra se ve azul porque la mayor parte de su superficie es agua.
+                Pero los científicos han descubierto que los océanos están cada vez más calientes y
+                más sucios. Miles de peces, tortugas y ballenas confunden las bolsas de plástico con
+                comida y se lastiman. Por eso, en muchos países, los niños ayudan a limpiar playas y
+                recogen la basura en bolsas para llevarla a reciclar. También existen parques nacionales
+                donde los animales viven protegidos. Si cada familia separa su basura, usa menos bolsas
+                de plástico y no tira colillas en la calle, el planeta seguirá siendo azul por mucho,
+                mucho tiempo más.
+            </p>
+
+            <div class="pregunta">
+                <p>13. ¿Por qué la Tierra se ve azul desde el espacio?</p>
+                <label><input type="radio" name="p13" value="a"> Porque tiene mucha arena</label>
+                <label><input type="radio" name="p13" value="b"> Porque la mayor parte de su superficie es agua</label>
+                <label><input type="radio" name="p13" value="c"> Porque refleja el color del cielo</label>
+            </div>
+
+            <div class="pregunta">
+                <p>14. ¿Qué les pasa a los animales marinos por la basura?</p>
+                <label><input type="radio" name="p14" value="a"> Aprenden a comer plástico</label>
+                <label><input type="radio" name="p14" value="b"> Confunden las bolsas con comida y se lastiman</label>
+                <label><input type="radio" name="p14" value="c"> Nada, los animales no se afectan</label>
+            </div>
+
+            <div class="pregunta">
+                <p>15. ¿Qué pueden hacer las familias para cuidar el planeta?</p>
+                <label><input type="radio" name="p15" value="a"> Usar más bolsas de plástico</label>
+                <label><input type="radio" name="p15" value="b"> Separar la basura y usar menos plástico</label>
+                <label><input type="radio" name="p15" value="c"> Tirar las colillas en la calle</label>
+            </div>
+        </div>
+
+        <div id="resultado" class="resultado" style="display:none;"></div>
+
+        <div class="controles">
+            <button type="button" onclick="verificar()">Verificar respuestas</button>
+            <button type="button" onclick="reiniciar()">Reiniciar</button>
+            <button type="button" class="imprimir" onclick="window.print()">Imprimir</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Asociación de Padres de Familia. Todos los derechos reservados."Por una comunidad Unida en un Sólo Propósito"</p>
+    </footer>
+
+    <script>
+        // Respuestas correctas (15 preguntas)
+        const correctas = {
+            p1: 'b', p2: 'c', p3: 'b',
+            p4: 'b', p5: 'a', p6: 'c',
+            p7: 'b', p8: 'b', p9: 'b',
+            p10: 'b', p11: 'b', p12: 'b',
+            p13: 'b', p14: 'b', p15: 'b'
+        };
+
+        function verificar() {
+            let aciertos = 0;
+            const total = Object.keys(correctas).length;
+            for (const key in correctas) {
+                const seleccion = document.querySelector(`input[name="${key}"]:checked`);
+                if (seleccion && seleccion.value === correctas[key]) {
+                    aciertos++;
+                }
+            }
+            const r = document.getElementById('resultado');
+            r.style.display = 'block';
+            r.className = 'resultado ' + (aciertos === total ? 'correcto' : 'incorrecto');
+            r.innerHTML = `Obtuviste <strong>${aciertos}</strong> de <strong>${total}</strong> respuestas correctas. ` +
+                (aciertos === total ? '¡Excelente trabajo! 🌟' : 'Vuelve a leer los textos e inténtalo de nuevo.');
+            r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function reiniciar() {
+            const inputs = document.querySelectorAll('input[type="radio"]');
+            inputs.forEach(i => i.checked = false);
+            const r = document.getElementById('resultado');
+            r.style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

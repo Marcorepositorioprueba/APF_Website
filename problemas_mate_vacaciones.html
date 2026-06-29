@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas de Matemáticas - Vacaciones</title>
+    <link rel="stylesheet" href="css/herramienta_style.css">
+    <style>
+        /* Estilos propios de la herramienta - no tocan style.css global */
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 15px auto;
+            font-size: 1.05em;
+            color: #555;
+        }
+        .niveles {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .niveles button {
+            background-color: #005a9c;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .niveles button:hover { background-color: #003f70; }
+        .niveles button.activo { background-color: #28a745; }
+        .nivel-bloque {
+            display: none;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .nivel-bloque.visible { display: block; }
+        .nivel-bloque h3 {
+            color: #005a9c;
+            margin-top: 0;
+            border-bottom: 2px solid #e0f7fa;
+            padding-bottom: 8px;
+        }
+        .ejercicio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            margin: 6px 0;
+            background-color: #f4f7f6;
+            border-radius: 4px;
+            font-size: 1.05em;
+        }
+        .ejercicio .op {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #005a9c;
+        }
+        .ejercicio .resp input {
+            width: 80px;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            text-align: center;
+        }
+        .problema {
+            margin-top: 12px;
+            padding: 12px 15px;
+            background-color: #fff8e1;
+            border-left: 4px solid #f0a500;
+            border-radius: 4px;
+        }
+        .problema p { margin: 0 0 6px 0; }
+        .problema .resp-problema input {
+            width: 90px;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            text-align: center;
+        }
+        details.respuestas {
+            max-width: 800px;
+            margin: 25px auto;
+            background-color: #e7f3ff;
+            border: 1px solid #b6daff;
+            border-radius: 8px;
+            padding: 12px 18px;
+        }
+        details.respuestas summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #005a9c;
+        }
+        details.respuestas ul { margin: 8px 0; }
+        details.respuestas li { margin: 4px 0; }
+        .controles {
+            text-align: center;
+            margin: 25px auto;
+        }
+        .controles button {
+            background-color: #005a9c;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .controles button:hover { background-color: #003f70; }
+        .controles button.imprimir { background-color: #28a745; }
+        .controles button.imprimir:hover { background-color: #1e7e34; }
+        @media print {
+            .controles, .niveles, details.respuestas { display: none !important; }
+            .nivel-bloque { display: block !important; box-shadow: none; border: 1px solid #ccc; }
+            body { background-color: white; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/escudo1.png" alt="Logo Escuela" class="logo">
+        <div class="header-text">
+            <h1>Problemas de Matemáticas</h1>
+            <h2>Actividades para Vacaciones · APF</h2>
+        </div>
+    </header>
+
+    <nav style="margin: 15px auto; text-align: center;">
+        <a href="recursos_apoyo.html" class="btn-regresar">&larr; Volver a Recursos</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            Elige el nivel de tu hijo(a). Resuelve los ejercicios en una hoja aparte
+            o directamente aquí. Las respuestas están al final, dentro del acordeón.
+        </p>
+
+        <div class="niveles">
+            <button type="button" onclick="mostrarNivel('n1', this)" class="activo">1° - 2° grado</button>
+            <button type="button" onclick="mostrarNivel('n2', this)">3° - 4° grado</button>
+            <button type="button" onclick="mostrarNivel('n3', this)">5° - 6° grado</button>
+        </div>
+
+        <!-- ============ NIVEL 1 ============ -->
+        <div id="n1" class="nivel-bloque visible">
+            <h3>Nivel 1 (1° - 2° grado)</h3>
+
+            <p><strong>A. Cálculo rápido (suma y resta):</strong></p>
+            <div class="ejercicio"><span class="op">1) 5 + 3 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">2) 8 + 6 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">3) 12 + 7 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">4) 9 - 4 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">5) 15 - 8 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">6) 20 + 14 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">7) 11 - 5 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">8) 13 + 9 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">9) 18 - 10 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">10) 25 + 25 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">11) 30 - 17 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">12) 14 + 16 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">13) 22 - 9 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">14) 7 + 8 + 5 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">15) 19 - 11 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">16) 10 + 10 + 10 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">17) 27 - 18 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">18) 33 + 7 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">19) 50 - 25 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">20) 16 + 14 - 5 =</span><span class="resp"><input type="number"></span></div>
+
+            <p style="margin-top: 20px;"><strong>B. Problemas razonados:</strong></p>
+            <div class="problema">
+                <p>1) Ana tiene 7 dulces y le regalan 5 más. ¿Cuántos dulces tiene ahora?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>2) Pedro tenía 12 globos y se le rompieron 4. ¿Cuántos globos le quedan?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>3) En una bolsa hay 9 manzanas y en otra hay 6. Si regalamos 4 manzanas en total, ¿cuántas quedan?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>4) Luis tiene 11 stickers, su hermano le regala 4 y luego pierde 3. ¿Cuántos stickers tiene al final?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>5) En una caja hay 8 lápices rojos y 7 azules. ¿Cuántos lápices hay en total?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+        </div>
+
+        <!-- ============ NIVEL 2 ============ -->
+        <div id="n2" class="nivel-bloque">
+            <h3>Nivel 2 (3° - 4° grado)</h3>
+
+            <p><strong>A. Cálculo rápido (suma, resta y multiplicación):</strong></p>
+            <div class="ejercicio"><span class="op">1) 25 + 18 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">2) 43 - 27 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">3) 6 × 7 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">4) 8 × 9 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">5) 56 + 38 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">6) 71 - 34 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">7) 12 × 5 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">8) 9 × 6 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">9) 100 - 47 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">10) 11 × 11 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">11) 67 + 25 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">12) 90 - 38 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">13) 7 × 8 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">14) 13 × 4 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">15) 48 + 36 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">16) 85 - 49 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">17) 15 × 3 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">18) 14 × 6 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">19) 99 + 17 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">20) 12 × 12 =</span><span class="resp"><input type="number"></span></div>
+
+            <p style="margin-top: 20px;"><strong>B. Problemas razonados:</strong></p>
+            <div class="problema">
+                <p>1) En una caja hay 8 paquetes con 6 galletas cada uno. ¿Cuántas galletas hay en total?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>2) María repartió 54 stickers entre 9 amigos en partes iguales. ¿Cuántos le tocan a cada uno?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>3) Un álbum tiene 25 páginas y en cada página caben 6 figuritas. ¿Cuántas figuritas caben en todo el álbum?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>4) Carlos tenía 85 pesos. Gastó 37 en un helado y 28 en un jugo. ¿Cuánto dinero le queda?</p>
+                <span class="resp-problema">Respuesta: $ <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>5) Una maestra tiene 96 dulces para repartir entre 8 niños. ¿Cuántos dulces recibe cada uno?</p>
+                <span class="resp-problema">Respuesta: <input type="number"></span>
+            </div>
+        </div>
+
+        <!-- ============ NIVEL 3 ============ -->
+        <div id="n3" class="nivel-bloque">
+            <h3>Nivel 3 (5° - 6° grado)</h3>
+
+            <p><strong>A. Cálculo rápido (operaciones mixtas):</strong></p>
+            <div class="ejercicio"><span class="op">1) 145 + 278 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">2) 500 - 187 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">3) 25 × 4 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">4) 96 ÷ 8 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">5) 12 × 15 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">6) 144 ÷ 12 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">7) 350 + 275 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">8) 1000 - 456 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">9) 35 × 6 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">10) 200 ÷ 25 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">11) 18 × 7 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">12) 256 + 489 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">13) 720 - 348 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">14) 56 ÷ 7 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">15) 22 × 13 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">16) 180 ÷ 9 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">17) 47 × 8 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">18) 999 - 543 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">19) 324 ÷ 4 =</span><span class="resp"><input type="number"></span></div>
+            <div class="ejercicio"><span class="op">20) 16 × 25 =</span><span class="resp"><input type="number"></span></div>
+
+            <p style="margin-top: 20px;"><strong>B. Problemas razonados:</strong></p>
+            <div class="problema">
+                <p>1) Una librería vendió 124 libros en la mañana y 87 en la tarde. Si cada libro cuesta $85,
+                ¿cuánto dinero recaudó en total?</p>
+                <span class="resp-problema">Respuesta: $ <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>2) Un camión transporta 48 cajas. Cada caja tiene 12 latas. ¿Cuántas latas lleva el camión?
+                Si se descargan 96 latas, ¿cuántas quedan?</p>
+                <span class="resp-problema">Total: <input type="number"> — Quedan: <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>3) Tres hermanos ahorraron $1,250 en total. Si el mayor tiene el doble del menor
+                y el del medio tiene $50 más que el menor, ¿cuánto tiene cada uno?</p>
+                <span class="resp-problema">Menor: $ <input type="number"> — Medio: $ <input type="number"> — Mayor: $ <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>4) Una escuela organizó una excursión. Pagaron $4,800 por 3 camiones en partes iguales.
+                Después recogieron $6,750 de las cooperaciones de los padres. ¿Cuánto ganó la escuela?</p>
+                <span class="resp-problema">Costo por camión: $ <input type="number"> — Ganancia: $ <input type="number"></span>
+            </div>
+            <div class="problema">
+                <p>5) Ana corre 3 km cada día de lunes a viernes. El sábado corre el doble y descansa el domingo.
+                ¿Cuántos kilómetros corre en 4 semanas?</p>
+                <span class="resp-problema">Respuesta: <input type="number"> km</span>
+            </div>
+        </div>
+
+        <!-- ============ RESPUESTAS ============ -->
+        <details class="respuestas">
+            <summary>👀 Ver respuestas (clic para abrir)</summary>
+            <p><strong>Nivel 1 - Cálculo (20):</strong> 8, 14, 19, 5, 7, 34, 6, 22, 8, 50, 13, 30, 13, 20, 8, 30, 9, 40, 25, 25</p>
+            <p><strong>Nivel 1 - Problemas:</strong> 1) 12 dulces — 2) 8 globos — 3) 11 manzanas — 4) 12 stickers — 5) 15 lápices</p>
+            <p><strong>Nivel 2 - Cálculo (20):</strong> 43, 16, 42, 72, 94, 37, 60, 54, 53, 121, 92, 52, 56, 52, 84, 36, 45, 84, 116, 144</p>
+            <p><strong>Nivel 2 - Problemas:</strong> 1) 48 galletas — 2) 6 stickers c/u — 3) 150 figuritas — 4) $20 — 5) 12 dulces c/u</p>
+            <p><strong>Nivel 3 - Cálculo (20):</strong> 423, 313, 100, 12, 180, 12, 625, 544, 210, 8, 126, 745, 372, 8, 286, 20, 376, 456, 81, 400</p>
+            <p><strong>Nivel 3 - Problemas:</strong> 1) $17,935 — 2) 576 latas; 480 quedan — 3) Menor $300, Medio $350, Mayor $600 — 4) Camión $1,600; Ganancia $1,950 — 5) 84 km</p>
+        </details>
+
+        <div class="controles">
+            <button type="button" onclick="window.print()">Imprimir</button>
+            <button type="button" onclick="limpiar()">Limpiar respuestas</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Asociación de Padres de Familia. Todos los derechos reservados."Por una comunidad Unida en un Sólo Propósito"</p>
+    </footer>
+
+    <script>
+        function mostrarNivel(id, btn) {
+            document.querySelectorAll('.nivel-bloque').forEach(b => b.classList.remove('visible'));
+            document.getElementById(id).classList.add('visible');
+            document.querySelectorAll('.niveles button').forEach(b => b.classList.remove('activo'));
+            btn.classList.add('activo');
+            window.scrollTo({ top: document.querySelector('.niveles').offsetTop - 20, behavior: 'smooth' });
+        }
+
+        function limpiar() {
+            document.querySelectorAll('.nivel-bloque input').forEach(i => i.value = '');
+        }
+    </script>
+</body>
+</html>
