@@ -101,6 +101,32 @@
             border-radius: 4px;
             display: block;
         }
+        .btn-ver-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #005a9c;
+            color: #fff !important;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            margin-bottom: 18px;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+        }
+        .btn-ver-pdf:hover {
+            background-color: #003d6b;
+            color: #fff !important;
+            transform: translateY(-1px);
+        }
+        .btn-ver-pdf:active { transform: translateY(0); }
+        /* En móvil el iframe no renderiza el PDF: ocultarlo para no dejar
+           un hueco blanco gigante. El botón de arriba cubre ese caso. */
+        @media (max-width: 900px) {
+            .pdf-bloque iframe { display: none; }
+        }
         .aviso {
             margin-top: 12px;
             padding: 10px 14px;
@@ -204,7 +230,11 @@
              ========================================================= -->
         <h2 class="seccion">📄 Reporte de Tesorería — Cierre de Ciclo</h2>
         <div class="pdf-bloque">
-            <!-- iframe con sandbox: bloquea descarga, impresión, scripts -->
+            <a href="images/restesor.pdf" target="_blank" rel="noopener noreferrer" class="btn-ver-pdf">
+                📄 Abrir PDF en visor
+            </a>
+            <!-- iframe con sandbox: bloquea descarga, impresión, scripts.
+                 Se oculta en móvil vía @media (no muestra el PDF en pantallas táctiles). -->
             <iframe
                 src="images/restesor.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 title="Reporte de Tesorería"
